@@ -13,8 +13,8 @@
 ticket_number = str(input("Введите шестизначный номер билета: "))
 first_three = 0
 second_three = 0
-for i in range (len(ticket_number)):
-    j = -i
+j = -1
+for i in range (len(ticket_number) // 2):
     first_three += int(ticket_number[i])
     second_three += int(ticket_number[j])
     j -= 1
@@ -22,7 +22,6 @@ if first_three == second_three:
     print('Счастливый билет')
 else:
     print('Вам не повезло')
-
 
 # Второй вариант
 ticket_number = int(input("Введите шестизначный номер билета: "))
